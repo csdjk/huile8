@@ -38,15 +38,18 @@ module.exports = class WordProvider {
     const tree = [];
     let element = {};
     this.list.sort().forEach(word => {
-      let prefix = word.substr(0, 1);
-      if (element.prefix != prefix) {
-        element = {
-          prefix,
-          children: []
-        };
-        tree.push(element);
+      if (word != '') {
+        let prefix = word.substr(0, 1);
+        if (element.prefix != prefix) {
+          element = {
+            prefix,
+            children: []
+          };
+          tree.push(element);
+        }
+        element.children.push(word);
       }
-      element.children.push(word);
+
     });
     this.tree = tree;
 

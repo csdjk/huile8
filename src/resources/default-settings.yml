@@ -1,0 +1,5 @@
+
+repository:
+  type: git
+  url: git@github.com:username/settings.git
+  branch: master
