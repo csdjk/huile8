@@ -1,5 +1,7 @@
 node_modules
 .vscode-test/
+.history/
+.vscode/
 *.vsix
 package-lock.json
 .DS_Store
